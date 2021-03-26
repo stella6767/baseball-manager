@@ -9,10 +9,16 @@ import lombok.NoArgsConstructor;
 @Data
 public class PositionDto {
 	
+//	private String position;
+//	private String lotte;
+//	private String nc;
+//	private String kia;
+//	private String HaeTae;
+
+
 	private String position;
 	private String lotte;
-	private String nc;
-	private String kia;
-	private String HaeTae;
-
+	private String hanhwa;
+	private String samsung;
+	
 }

@@ -10,7 +10,7 @@
 				<th>롯데</th>
 				<th>NC</th>
 				<th>기아</th>
-				<th>해태</th>
+<!-- 				<th>해태</th> -->
 			</tr>
 		</thead>
 		<tbody id="tbody">
@@ -18,9 +18,9 @@
 				<tr>
 					<td>${positionDto.position}</td>
 					<td>${positionDto.lotte}</td>
-					<td>${positionDto.nc}</td>
-					<td>${positionDto.kia}</td>
-					<td>${positionDto.HaeTae}</td>
+					<td>${positionDto.hanhwa}</td>
+					<td>${positionDto.samsung}</td>
+			<%-- 		<td>${positionDto.HaeTae}</td> --%>
 				</tr>
 			</c:forEach>
 		</tbody>

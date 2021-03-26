@@ -2,7 +2,9 @@ package com.example.baseballex1.service;
 
 import java.util.List;
 
-import org.qlrm.mapper.JpaResultMapper;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 import org.springframework.stereotype.Service;
 
 import com.example.baseballex1.domain.player.Player;
@@ -23,6 +25,10 @@ public class PlayerService {
 	
 	private final PositionQuery positionQuery;
 
+
+	@PersistenceContext
+	private EntityManager em;
+	
 	
 	public List<Team> 팀불러오기() {
 		return teamRepository.findAll();
@@ -52,12 +58,21 @@ public class PlayerService {
 	}
 	
 	
-	public List<PositionDto> 포지션별선수() {	
-		JpaResultMapper jpaResultMapper = new JpaResultMapper();
-		List<PositionDto> positionDtos = jpaResultMapper.list(positionQuery.PostionPivot(), PositionDto.class);
-		return positionDtos;
+//	public List<PositionDto> 포지션별선수() {	 //포기
+//		JpaResultMapper jpaResultMapper = new JpaResultMapper();
+//		List<PositionDto> positionDtos = jpaResultMapper.list(positionQuery.PostionPivot(), PositionDto.class);
+//		return positionDtos;
+//
+//	}
+	
+	
+	public List<PositionDto> 포지션별선수(){
+		
+		List<PositionDto> positionDtoList = em.createNamedQuery("mPositionPlayer").getResultList();
 
+		return positionDtoList;
 	}
+
 	
 
 }
