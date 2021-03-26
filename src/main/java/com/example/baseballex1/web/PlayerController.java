@@ -10,14 +10,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.example.baseballex1.domain.field.Field;
-import com.example.baseballex1.domain.player.Player;
-import com.example.baseballex1.domain.player.PlayerRepository;
 import com.example.baseballex1.service.PlayerService;
 import com.example.baseballex1.web.dto.CMRespDto;
-import com.example.baseballex1.web.dto.PositionDto;
+import com.example.baseballex1.web.dto.PlayerPositionRespDto;
 import com.example.baseballex1.web.dto.player.PlayerSaveRepDto;
-import com.example.baseballex1.web.dto.team.TeamSaveReqDto;
 
 import lombok.RequiredArgsConstructor;
 
@@ -61,9 +57,9 @@ public class PlayerController {
 	
 	
 	@GetMapping("/position") 
-	public String positionplayer(Model model) {
-		List<PositionDto> positionDtos = playerService.포지션별선수();
-		model.addAttribute("positionDtos", positionDtos);
+	public String positionList(Model model) {
+		List<PlayerPositionRespDto> dtos = playerService.포지션별선수리스트();
+		model.addAttribute("dtos", dtos);
 		
 		return "player/positionPlayer";
 	}

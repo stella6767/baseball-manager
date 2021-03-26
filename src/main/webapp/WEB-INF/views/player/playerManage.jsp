@@ -9,6 +9,7 @@
 				<th>선수 이름</th>
 				<th>포지션</th>
 				<th>팀</th>
+				<th>야구장</th>
 				<th></th>
 			</tr>
 		</thead>
@@ -19,6 +20,7 @@
 					<td>${player.name}</td>
 					<td>${player.position}</td>
 					<td>${player.team.name }</td>
+					<td>${player.team.field.name }</td>
 					<td><button class="btn btn-danger" onclick="deleteById(${player.id})">삭제</button></td>
 				</tr>
 			</c:forEach>

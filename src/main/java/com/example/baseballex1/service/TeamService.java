@@ -5,6 +5,7 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.example.baseballex1.domain.field.Field;
 import com.example.baseballex1.domain.field.FieldRepository;
@@ -21,7 +22,7 @@ public class TeamService {
 	private final FieldRepository fieldRepository;
 	
 	
-	
+	@Transactional(readOnly = true)
 	public List<Field> 선택가능야구장() {
 		
 		List<Field> fieldList = new ArrayList<>();
@@ -38,6 +39,7 @@ public class TeamService {
 	}
 	
 	
+	@Transactional
 	public void 팀등록(Team team, int fieldId) { 
 		
 		Field field = fieldRepository.findById(fieldId).get();
@@ -49,10 +51,14 @@ public class TeamService {
 		teamRepository.save(team);
 	}
 	
+	
+	@Transactional(readOnly = true)
 	public List<Team> 전체찾기(){
 		return teamRepository.findAll();
 	}
 	
+	
+	@Transactional
 	public void 삭제하기(int id) {
 		
 		teamRepository.deleteById(id);

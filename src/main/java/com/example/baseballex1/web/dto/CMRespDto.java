@@ -10,4 +10,5 @@ import lombok.NoArgsConstructor;
 public class CMRespDto<T> {
 	private int statusCode;
 	private T data;
+	
 }

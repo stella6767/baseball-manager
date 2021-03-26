@@ -7,20 +7,18 @@
 		<thead>
 			<tr>
 				<th>포지션</th>
+				<th>LG</th>
 				<th>롯데</th>
-				<th>NC</th>
-				<th>기아</th>
-<!-- 				<th>해태</th> -->
+				<th>삼성</th>
 			</tr>
 		</thead>
 		<tbody id="tbody">
-			<c:forEach var="positionDto" items="${positionDtos}">
+			<c:forEach var="dto" items="${dtos}">
 				<tr>
-					<td>${positionDto.position}</td>
-					<td>${positionDto.lotte}</td>
-					<td>${positionDto.hanhwa}</td>
-					<td>${positionDto.samsung}</td>
-			<%-- 		<td>${positionDto.HaeTae}</td> --%>
+					<td>${dto.position}</td>
+					<td>${dto.lg}</td>
+					<td>${dto.lotte}</td>
+					<td>${dto.samsung}</td>
 				</tr>
 			</c:forEach>
 		</tbody>
