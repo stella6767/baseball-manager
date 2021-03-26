@@ -1,4 +1,8 @@
 
+![image](https://user-images.githubusercontent.com/65489223/112576252-48c1bf80-8e35-11eb-9508-90acaa873b25.png)
+![image](https://user-images.githubusercontent.com/65489223/112576261-4ceddd00-8e35-11eb-89d2-f06cdcfddbf9.png)
+![image](https://user-images.githubusercontent.com/65489223/112576268-4fe8cd80-8e35-11eb-92f6-2ba909e60b86.png)
+![image](https://user-images.githubusercontent.com/65489223/112576300-5bd48f80-8e35-11eb-8450-8e3dfc939df4.png)
 
 
 LG, lotte, 삼성을 칼러명으로 주고, 
